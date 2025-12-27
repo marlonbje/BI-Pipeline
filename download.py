@@ -46,7 +46,7 @@ class Download:
               
     def get_macroeconomics(self,indicator):
         try:
-            with open('configs.json','r') as f:
+            with open('lists/configs.json','r') as f:
                 key = json.load(f)['FRED_API_KEY']
         except (FileNotFoundError,KeyError):
             self.logger.error('Error retrieving FRED API-Key')
